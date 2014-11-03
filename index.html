@@ -1,72 +1,88 @@
 <html>
 	<head>
-		<link href="fonts.css" rel="stylesheet">
-		<style type="text/css">
-
-			body{
-				margin: 0;
-				background: #f0f0f0;
-				font-family: "Roboto";
-			}
-			nav{
-				width: 100%;
-				height: 40px;
-				background: grey;
-			}
-			#header{
-				width: 100%;
-				height: 150px;
-				background: white;
-				box-shadow: grey 0 0 10px;
-				position: fixed;
-				top:0;
-				right: 0;
-				z-index: 5;
-			}
-			#nav_bar_left{
-				height: 100%;
-				background: white;
-				width: 150px;
-				border-style: solid;
-				border-width: 0;
-				border-right: 1px solid #e5e5e5;
-				border-color: rgba(128,128,128,.25);
-				left: 0;
-				position: absolute;
-				z-index: 4;
-			}
-			#boton_rojo{
-				position: absolute;
-				background: red;
-				right: 10px;
-				bottom: 10px;
-				width: 50px;
-				height: 50px;
-				border-radius: 50%;
-			}
-		</style>
-		<link rel="style/bootstrap.min.css">
+		<meta charset="UTF-8">	
 		<script type="text/javascript" src="script/js/jquery.min.js"></script>
 		<script type="text/javascript" src="script/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="style/bootstrap.min.css">
+		<title>J. Junquera</title>
 		<script type="text/javascript">
-			var mueveHeader = function(){$('#header').animate({height: '180px'}, 480);$('#header').animate({height: '150px'}, 500, mueveHeader);};
-			var mueveLado = function(){$('#nav_bar_left').animate({width: '180px'}, 550);$('#nav_bar_left').animate({width: '150px'}, 520, mueveLado);};
-			var mueveNav = function(){$('nav').animate({height: '30px'}, 200);$('nav').animate({height: '40px'}, 250, mueveNav);};
-			var botonParpadea = function(){$('#boton_rojo').animate({opacity: 0}, 1000); $('#boton_rojo').animate({opacity: 1}, 200, botonParpadea);};
-			$(document).ready(mueveHeader);
-			$(document).ready(mueveLado);
-			$(document).ready(mueveNav);
-			$(document).ready(botonParpadea);
+			var main = function(){
+				$('#saber_mas').click(function(){
+					$('#main').animate({marginTop: "-100%"}, 1000);
+				});
+
+				$('#inicio').click(function(){
+					$('#main').animate({marginTop: "0"}, 1000);
+				});
+			};
+			$(document).ready(main);
 		</script>
+		<style type="text/css">
+			#main{
+				background: url('src/images/me.png');
+				background-repeat: no-repeat;
+				background-size: cover;
+				z-index: 1;
+				position: absolute;
+				top: 0;
+				width: 100%;
+				height: 100%;
+			}
+			#descripcion{
+				width: 50%;
+				height: 100%;
+				background-color: rgba(200,200,200,0.5);
+				padding-top: 20%;
+				padding-left: 10%;
+				padding-right: 10%;
+				text-align: right;
+			}
+			#datos{
+				background: rgb(247,247,247);
+				position: fixed;
+				z-index: 0;
+				top: 0;
+				width: 100%;
+				height: 100%;
+			}
+			#enlaces{
+				display: block;
+				height: 50px;
+			}
+			#inicio{
+
+			}
+			a{
+				text-decoration: none;
+
+			}
+			a img{
+				padding-left: 5px;
+				height: 35px;
+			}
+		</style>
 	</head>
 	<body>
-		<div id="header">
-			<nav></nav>
+		<div id="main">
+			<div id="descripcion" class="pull-right">
+				<h1>Javier Junquera Sánchez</h1>
+				<p>Estudiante de Grado en Ingeniería Informática en la UAH.</p>
+				<div id="enlaces">
+					<a target="_blank" href="https://plus.google.com/+JavierJunqueraSanchez" >
+						<img src="src/images/g+.png" style="height:35px">
+					</a>
+					<a target="_blank" href="https://www.linkedin.com/in/jjunquera">
+						<img src="src/images/linkedin.png">
+					</a>	
+					<a target="_blank" href="https://github.com/junquera">
+						<img src="src/images/github.png">
+					</a>
+				</div>
+				<a id="saber_mas">Saber más...</a>
+			</div>
 		</div>
-		<div id="nav_bar_left">
-			
+		<div id="datos">
 		</div>
-		<div id="boton_rojo">
-		</div>
+		<img id="inicio" src="">
 	</body>
 </html>
