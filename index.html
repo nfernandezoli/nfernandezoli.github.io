@@ -8,12 +8,14 @@
 		<script type="text/javascript">
 			var main = function(){
 				$('#saber_mas').click(function(){
-					$('#main').animate({marginTop: "-100%"}, 1000);
+					$('#main').animate({top: "-200%"}, 2000);
 				});
 
 				$('#inicio').click(function(){
-					$('#main').animate({marginTop: "0"}, 1000);
+					$('#main').animate({top: "0"}, 1000);
 				});
+
+				$('#inicio').hover(function(){$(this).toggleClass("active")});
 			};
 			$(document).ready(main);
 		</script>
@@ -22,7 +24,7 @@
 				background: url('src/images/me.png');
 				background-repeat: no-repeat;
 				background-size: cover;
-				z-index: 1;
+				z-index: 2;
 				position: absolute;
 				top: 0;
 				width: 100%;
@@ -47,10 +49,18 @@
 			}
 			#enlaces{
 				display: block;
-				height: 50px;
+				height: 35px;
+				margin: 10px;
 			}
 			#inicio{
-
+				height: 35px;
+				z-index:1;
+				float: right;
+				opacity: 0.5;
+				margin:	5px;
+			}
+			#inicio.active{
+				opacity: 1;
 			}
 			a{
 				text-decoration: none;
@@ -65,11 +75,17 @@
 	<body>
 		<div id="main">
 			<div id="descripcion" class="pull-right">
+			<div id="descripcion_principal">
 				<h1>Javier Junquera Sánchez</h1>
-				<p>Estudiante de Grado en Ingeniería Informática en la UAH.</p>
+				<p>Estudiante de Grado en Ingeniería Informática en la Universidad de Alcalá. Apasionado de la programación y la ciberseguridad.</p>
+				<b>Madrid, 1992</b>
+				</div>
 				<div id="enlaces">
 					<a target="_blank" href="https://plus.google.com/+JavierJunqueraSanchez" >
 						<img src="src/images/g+.png" style="height:35px">
+					</a>
+					<a target="_blank" href="mailto:javier.junquera.sanchez@gmail.com" >
+						<img src="src/images/gmail.png" style="height:35px">
 					</a>
 					<a target="_blank" href="https://www.linkedin.com/in/jjunquera">
 						<img src="src/images/linkedin.png">
@@ -78,10 +94,11 @@
 						<img src="src/images/github.png">
 					</a>
 				</div>
-				<a id="saber_mas">Saber más...</a>
+				<!-- <a id="saber_mas">Saber más...</a> -->
 			</div>
 		</div>
 		<div id="datos">
+			<img id="inicio" src="src/images/inicio.png">
 		</div>
 		<img id="inicio" src="">
 	</body>
