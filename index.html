@@ -6,7 +6,6 @@
 		<title>J. Junquera</title>
 		<script type="text/javascript">
 			var main = function(){
-				$('#datos').css("opacity", 1);
 				$('#saber_mas').click(function(){
 					$('#main').animate({top: "-200%"}, 2000);
 				});
@@ -18,6 +17,7 @@
 				$('#up').hover(function(){$(this).toggleClass("active")});
 			};
 			$(document).ready(main);
+			$('#main').ready(function(){$('#datos').css("opacity", 1);});
 		</script>
 		<style type="text/css">
 			#main{
