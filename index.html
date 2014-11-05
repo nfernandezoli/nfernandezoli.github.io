@@ -1,5 +1,4 @@
-<html>
-	<head>
+<html><head>
 		<meta charset="UTF-8">	
 		<script type="text/javascript" src="script/js/jquery.min.js"></script>
 		<script type="text/javascript" src="script/js/bootstrap.min.js"></script>
@@ -11,17 +10,17 @@
 					$('#main').animate({top: "-200%"}, 2000);
 				});
 
-				$('#inicio').click(function(){
+				$('#up').click(function(){
 					$('#main').animate({top: "0"}, 1000);
 				});
 
-				$('#inicio').hover(function(){$(this).toggleClass("active")});
+				$('#up').hover(function(){$(this).toggleClass("active")});
 			};
 			$(document).ready(main);
 		</script>
 		<style type="text/css">
 			#main{
-				background: url('src/images/me.png');
+				background: url('style/images/me.png');
 				background-repeat: no-repeat;
 				background-size: cover;
 				z-index: 2;
@@ -41,6 +40,7 @@
 			}
 			#datos{
 				background: rgb(247,247,247);
+				padding-left: 20%;
 				position: fixed;
 				z-index: 0;
 				top: 0;
@@ -52,54 +52,122 @@
 				height: 35px;
 				margin: 10px;
 			}
-			#inicio{
+			#up{
 				height: 35px;
 				z-index:1;
-				float: right;
+				position: fixed;
+				top: 0px;
+				right: 0px;
 				opacity: 0.5;
 				margin:	5px;
 			}
-			#inicio.active{
+			#up.active{
 				opacity: 1;
 			}
 			a{
 				text-decoration: none;
-
 			}
 			a img{
 				padding-left: 5px;
 				height: 35px;
+			}
+			.apartado{
+			}
+			.personal_link{
+				height:35px;
+			}
+			.separador{
+				width: 60%;
+				height: 1px;
+				background-color: #C2C2C2;
+				margin-bottom: 10px;
+			}
+			#icono{
+				float: left;
+				height: 120px;
+				border-radius: 5%;
+				width: initial;
+			}
+			.contenido{
+				height: 130px;
 			}
 		</style>
 	</head>
 	<body>
 		<div id="main">
 			<div id="descripcion" class="pull-right">
-			<div id="descripcion_principal">
-				<h1>Javier Junquera Sánchez</h1>
-				<p>Estudiante de Grado en Ingeniería Informática en la Universidad de Alcalá. Apasionado de la programación y la ciberseguridad.</p>
-				<b>Madrid, 1992</b>
-				</div>
-				<div id="enlaces">
-					<a target="_blank" href="https://plus.google.com/+JavierJunqueraSanchez" >
-						<img src="src/images/g+.png" style="height:35px">
-					</a>
-					<a target="_blank" href="mailto:javier.junquera.sanchez@gmail.com" >
-						<img src="src/images/gmail.png" style="height:35px">
-					</a>
-					<a target="_blank" href="https://www.linkedin.com/in/jjunquera">
-						<img src="src/images/linkedin.png">
-					</a>	
-					<a target="_blank" href="https://github.com/junquera">
-						<img src="src/images/github.png">
-					</a>
-				</div>
-				<!-- <a id="saber_mas">Saber más...</a> -->
+				<div id="descripcion_principal">
+					<h1>Javier Junquera Sánchez</h1>
+					<p>Estudiante de Grado en Ingeniería Informática en la Universidad de Alcalá. Apasionado de la programación y la ciberseguridad.</p>
+					<b>Madrid, 1992</b>
+					</div>
+					<div id="enlaces">
+						<a target="_blank" href="https://plus.google.com/+JavierJunqueraSanchez">
+							<img class="personal_link" src="style/images/g+.png">
+						</a>
+						<a target="_blank" href="mailto:javier.junquera.sanchez@gmail.com">
+							<img class="personal_link" src="style/images/gmail5.png">
+						</a>
+						<a target="_blank" href="https://www.linkedin.com/in/jjunquera">
+							<img class="personal_link" src="style/images/linkedin.png">
+						</a>	
+						<a target="_blank" href="https://github.com/junquera">
+							<img class="personal_link" src="style/images/github.png">
+						</a>
+					</div>
+				<a id="saber_mas">Saber más...</a>
 			</div>
 		</div>
+		<img id="up" src="style/images/up.png">
 		<div id="datos">
-			<img id="inicio" src="src/images/inicio.png">
+			<div id="personal" style="height: 160px;">
+				<h2>Datos personales</h2>
+				<div class="separador"></div>
+				<div class="contenido">
+				<img id="icono" src="style/images/foto_carnet.png" class="col-md-2">
+				<div class="col-md-6" id="texto" style="padding-top: 22px;">	
+					<b>Javier Junquera Sánchez</b>
+					<br>
+					<b>Madrid, 14 de Diciembre de 1992</b>
+					<br>
+					<a href="mailto:javier.junquera.sanchez@gmail.com">javier.junquera.sanchez@gmail.com</a>
+					<br>
+					<b>677607556</b>
+					</div>
+				</div>
+			</div>
+
+			<div id="academico" class="apartado">
+				<h2>Datos académicos</h2>
+				<div class="separador"></div>
+				<div class="contenido">
+					<img id="icono" src="style/images/upm.png" class="col-md-2">
+					<div class="col-md-6" id="texto" style="padding-top: 12px;">
+						<h4>UPM</h4>
+						<b>Grado en Ingeniería de Telecomunicación</b>
+						<br>
+						<p>2010 - 2012</p>
+					</div>
+				</div>
+				<div class="contenido">
+				<img id="icono" src="style/images/uah.png" class="col-md-2">
+					<div class="col-md-6" id="texto" style="padding-top: 12px;">
+						<h4>UAH</h4>
+						<b>Grado en Ingeniería Informática</b>
+						<br>
+						<p>2012 - Actualidad</p>
+					</div>
+				</div>
+			</div>
+			<div id="experiencia" class="apartado">
+				<h2>Experiencia laboral</h2>
+			</div>
+			<div class="separador"></div>
+			<div id="otros" class="apartado">
+				<h2>Otros</h2>
+			</div>
 		</div>
-		<img id="inicio" src="">
-	</body>
-</html>
+		<img id="up" src="">
+	
+
+</body></html>
