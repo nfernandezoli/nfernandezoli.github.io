@@ -3,29 +3,31 @@
 		<script type="text/javascript" src="script/js/jquery.min.js"></script>
 		<script type="text/javascript" src="script/js/bootstrap.min.js"></script>
 		<link rel="stylesheet" type="text/css" href="style/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="style/fonts.css">
 		<title>J. Junquera</title>
 		<script type="text/javascript">
 			var main = function(){
 				$('#saber_mas').click(function(){
 					$('#main').animate({top: "-200%"}, 2000);
+					$('#datos').css('position', 'absolute');
 				});
 
 				$('#up').click(function(){
 					$('#main').animate({top: "0"}, 1000);
+					$('#datos').css('position', 'fixed');
 				});
-
-				$('#up').hover(function(){$(this).toggleClass("active")});
 			};
 			$(document).ready(main);
 		</script>
 		<style type="text/css">
 			#main{
 				background: url('style/images/me.png');
-				background-color: white;
+				background-color: #C5D0C5;
 				background-repeat: no-repeat;
 				background-size: cover;
+				font-family: 'Roboto';
 				z-index: 2;
-				position: fixed;
+				position: absolute;
 				top: 0;
 				width: 100%;
 				height: 100%;
@@ -33,7 +35,8 @@
 			#descripcion{
 				width: 50%;
 				height: 100%;
-				background-color: rgba(200,200,200,0.5);
+				background-color: rgba(0,0,0,0.5);
+				color: white;
 				padding-top: 20%;
 				padding-left: 10%;
 				padding-right: 10%;
@@ -41,12 +44,13 @@
 			}
 			#datos{
 				background: rgb(247,247,247);
-				padding-left: 20%;
+				padding-left: 10%;
 				position: fixed;
 				z-index: 0;
 				top: 0;
-				width: 100%;
-				height: 100%;
+				width: 80%;
+				margin-left: 10%;
+				box-shadow: grey 0 0 10px;
 			}
 			#enlaces{
 				display: block;
@@ -62,15 +66,20 @@
 				opacity: 0.5;
 				margin:	5px;
 			}
-			#up.active{
+			#up:hover{
 				opacity: 1;
 			}
-			a{
+			#saber_mas{
 				text-decoration: none;
+				color: #FFFFFF;
 			}
 			a img{
 				padding-left: 5px;
 				height: 35px;
+			}
+			#saber_mas:hover{
+				text-decoration: none;
+				color:#DFDFDF;
 			}
 			.apartado{
 			}
@@ -91,6 +100,9 @@
 			.articulo{
 				padding-bottom: 10px;
 				padding-left: 10px;
+			}
+			body{
+				background-color: #C5D0C5;
 			}
 		</style>
 	</head>
@@ -135,7 +147,7 @@
 					<br>
 					<a href="mailto:javier.junquera.sanchez@gmail.com">javier.junquera.sanchez@gmail.com</a>
 					<br>
-					<b>677607556</b>
+					<b>+34 677607556</b>
 					</div>
 				</div>
 			</div>
@@ -167,14 +179,43 @@
 				</div>
 			</div>
 
-			<div id="experiencia" class="apartado row">
+			<div id="idiomas" class="apartado row">
 				<div class="titulo_apartado">
-					<h2>Experiencia laboral</h2>
+					<h2>Idiomas</h2>
 					<div class="separador"></div>
 				</div>
 			</div>
+
+			<div id="c_informaticos" class="apartado row">
+				<div class="titulo_apartado">
+					<h2>Conocimientos informáticos</h2>
+				</div>
+				<div class="separador"></div>
+			</div>
+
+			<div id="experiencia" class="apartado row">
+				<div class="titulo_apartado">
+					<h2>Experiencia</h2>
+					<div class="separador"></div>
+				</div>
+
+				<div class="articulo row  col-md-4">
+				<img src="style/images/vips.png" class="col-md-7">
+					<div class="col-md-5" id="texto">
+						<h4>VIPS</h4>
+						<b>Camarero</b>
+						<br>
+						<p>2013 - Actualidad</p>
+					</div>
+				</div>
+
+			</div>
+
 			<div id="otros" class="apartado row">
-				<h2>Otros</h2>
+				<div class="titulo_apartado">
+					<h2>Otros</h2>
+					<br><br><br><br><br><br>
+				</div>
 				<div class="separador"></div>
 			</div>
 		</div>
