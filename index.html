@@ -21,10 +21,11 @@
 		<style type="text/css">
 			#main{
 				background: url('style/images/me.png');
+				background-color: white;
 				background-repeat: no-repeat;
 				background-size: cover;
 				z-index: 2;
-				position: absolute;
+				position: fixed;
 				top: 0;
 				width: 100%;
 				height: 100%;
@@ -83,13 +84,13 @@
 				margin-bottom: 10px;
 			}
 			#icono{
-				float: left;
 				height: 120px;
 				border-radius: 5%;
 				width: initial;
 			}
-			.contenido{
-				height: 130px;
+			.articulo{
+				padding-bottom: 10px;
+				padding-left: 10px;
 			}
 		</style>
 	</head>
@@ -120,12 +121,14 @@
 		</div>
 		<img id="up" src="style/images/up.png">
 		<div id="datos">
-			<div id="personal" style="height: 160px;">
-				<h2>Datos personales</h2>
-				<div class="separador"></div>
-				<div class="contenido">
-				<img id="icono" src="style/images/foto_carnet.png" class="col-md-2">
-				<div class="col-md-6" id="texto" style="padding-top: 22px;">	
+			<div id="personal" class="apartado row">
+				<div class="titulo_apartado">
+					<h2>Datos personales</h2>
+					<div class="separador"></div>
+				</div>
+				<div class="articulo row">
+				<img src="style/images/foto_carnet.png" class="col-md-1">
+				<div class="col-md-6" id="texto">	
 					<b>Javier Junquera Sánchez</b>
 					<br>
 					<b>Madrid, 14 de Diciembre de 1992</b>
@@ -137,21 +140,25 @@
 				</div>
 			</div>
 
-			<div id="academico" class="apartado">
-				<h2>Datos académicos</h2>
-				<div class="separador"></div>
-				<div class="contenido">
-					<img id="icono" src="style/images/upm.png" class="col-md-2">
-					<div class="col-md-6" id="texto" style="padding-top: 12px;">
+			<div id="academico" class="apartado row">
+				<div class="titulo_apartado">
+					<h2>Datos académicos</h2>
+					<div class="separador"></div>
+				</div>
+
+				<div class="articulo row  col-md-4">
+					<img src="style/images/upm.png" class="col-md-4">
+					<div class="col-md-6" id="texto">
 						<h4>UPM</h4>
 						<b>Grado en Ingeniería de Telecomunicación</b>
 						<br>
 						<p>2010 - 2012</p>
 					</div>
 				</div>
-				<div class="contenido">
-				<img id="icono" src="style/images/uah.png" class="col-md-2">
-					<div class="col-md-6" id="texto" style="padding-top: 12px;">
+
+				<div class="articulo row  col-md-4">
+				<img src="style/images/uah.png" class="col-md-4">
+					<div class="col-md-6" id="texto">
 						<h4>UAH</h4>
 						<b>Grado en Ingeniería Informática</b>
 						<br>
@@ -159,12 +166,16 @@
 					</div>
 				</div>
 			</div>
-			<div id="experiencia" class="apartado">
-				<h2>Experiencia laboral</h2>
+
+			<div id="experiencia" class="apartado row">
+				<div class="titulo_apartado">
+					<h2>Experiencia laboral</h2>
+					<div class="separador"></div>
+				</div>
 			</div>
-			<div class="separador"></div>
-			<div id="otros" class="apartado">
+			<div id="otros" class="apartado row">
 				<h2>Otros</h2>
+				<div class="separador"></div>
 			</div>
 		</div>
 		<img id="up" src="">
