@@ -1,110 +1,17 @@
-<html><head>
+<html>
+	<head>
 		<meta charset="UTF-8">	
+		<title>J. Junquera</title>
+		<meta name="description" content="Mi currículum online">
+		<link rel="icon" href="style/images/favicon.png">
+
 		<script type="text/javascript" src="script/js/jquery.min.js"></script>
 		<script type="text/javascript" src="script/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="script/js/main.js"></script>
+
 		<link rel="stylesheet" type="text/css" href="style/bootstrap.min.css">
 		<link rel="stylesheet" type="text/css" href="style/fonts.css">
-		<title>J. Junquera</title>
-		<script type="text/javascript">
-			var main = function(){
-				$('#saber_mas').click(function(){
-					$('#main').animate({top: "-200%"}, 2000);
-					$('#datos').css('position', 'absolute');
-				});
-
-				$('#up').click(function(){
-					$('#main').animate({top: "0"}, 1000);
-					$('#datos').css('position', 'fixed');
-				});
-			};
-			$(document).ready(main);
-		</script>
-		<style type="text/css">
-			#main{
-				background: url('style/images/me.png');
-				background-color: #C5D0C5;
-				background-repeat: no-repeat;
-				background-size: cover;
-				font-family: 'Roboto';
-				z-index: 2;
-				position: absolute;
-				top: 0;
-				width: 100%;
-				height: 100%;
-			}
-			#descripcion{
-				width: 50%;
-				height: 100%;
-				background-color: rgba(0,0,0,0.5);
-				color: white;
-				padding-top: 20%;
-				padding-left: 10%;
-				padding-right: 10%;
-				text-align: right;
-			}
-			#datos{
-				background: rgb(247,247,247);
-				padding-left: 10%;
-				position: fixed;
-				z-index: 0;
-				top: 0;
-				width: 80%;
-				margin-left: 10%;
-				box-shadow: grey 0 0 10px;
-			}
-			#enlaces{
-				display: block;
-				height: 35px;
-				margin: 10px;
-			}
-			#up{
-				height: 35px;
-				z-index:1;
-				position: fixed;
-				top: 0px;
-				right: 0px;
-				opacity: 0.5;
-				margin:	5px;
-			}
-			#up:hover{
-				opacity: 1;
-			}
-			#saber_mas{
-				text-decoration: none;
-				color: #FFFFFF;
-			}
-			a img{
-				padding-left: 5px;
-				height: 35px;
-			}
-			#saber_mas:hover{
-				text-decoration: none;
-				color:#DFDFDF;
-			}
-			.apartado{
-			}
-			.personal_link{
-				height:35px;
-			}
-			.separador{
-				width: 60%;
-				height: 1px;
-				background-color: #C2C2C2;
-				margin-bottom: 10px;
-			}
-			#icono{
-				height: 120px;
-				border-radius: 5%;
-				width: initial;
-			}
-			.articulo{
-				padding-bottom: 10px;
-				padding-left: 10px;
-			}
-			body{
-				background-color: #C5D0C5;
-			}
-		</style>
+		<link rel="stylesheet" type="text/css" href="style/style.css">
 	</head>
 	<body>
 		<div id="main">
@@ -139,8 +46,8 @@
 					<div class="separador"></div>
 				</div>
 				<div class="articulo row">
-				<img src="style/images/foto_carnet.png" class="col-md-1">
-				<div class="col-md-6" id="texto">	
+				<img src="style/images/foto_carnet.png" class="col-sm-1">
+				<div class="col-sm-6" id="texto">	
 					<b>Javier Junquera Sánchez</b>
 					<br>
 					<b>Madrid, 14 de Diciembre de 1992</b>
@@ -158,9 +65,9 @@
 					<div class="separador"></div>
 				</div>
 
-				<div class="articulo row  col-md-4">
-					<img src="style/images/upm.png" class="col-md-4">
-					<div class="col-md-6" id="texto">
+				<div class="articulo row  col-sm-4">
+					<img src="style/images/upm.png" class="col-sm-4">
+					<div class="col-sm-6" id="texto">
 						<h4>UPM</h4>
 						<b>Grado en Ingeniería de Telecomunicación</b>
 						<br>
@@ -168,9 +75,9 @@
 					</div>
 				</div>
 
-				<div class="articulo row  col-md-4">
-				<img src="style/images/uah.png" class="col-md-4">
-					<div class="col-md-6" id="texto">
+				<div class="articulo row  col-sm-4">
+				<img src="style/images/uah.png" class="col-sm-4">
+					<div class="col-sm-6" id="texto">
 						<h4>UAH</h4>
 						<b>Grado en Ingeniería Informática</b>
 						<br>
@@ -184,6 +91,23 @@
 					<h2>Idiomas</h2>
 					<div class="separador"></div>
 				</div>
+				<div class="articulo row col-sm-7">
+					<ul>
+						<li>
+							<b>Inglés (Nivel medio-alto)</b>
+							<ul>
+								<li>Nivel medio-alto</li>
+								<li>Intercambio de dos semanas a EEUU. Estuve en Winchester, un pueblo de Boston (Massachusetts), viviendo con una familia y asistiendo a clases en el instituto.
+								</li>
+							</ul>
+						</li>
+					</ul>
+					<ul>
+						<li>
+							<b>Francés (Nociones básicas)</b>
+						</li>
+					</ul>
+				</div>
 			</div>
 
 			<div id="c_informaticos" class="apartado row">
@@ -191,6 +115,32 @@
 					<h2>Conocimientos informáticos</h2>
 				</div>
 				<div class="separador"></div>
+				<div class="articulo row">
+					<ul>
+						<li>
+						<b>Lenguajes de programación:</b>
+						<ul class="col-sm-1">
+							<li>Java</li>
+							<li>C, C++</li>
+						</ul>
+						<ul class="col-sm-1">
+							<li>Python</li>
+							<li>SQL</li>
+						</ul>
+						<ul class="col-sm-1">
+							<li>Pascal</li>
+							<li>JavaScript</li>
+						</ul>
+						<ul class="col-sm-1">
+							<li>PHP</li>
+							<li>HTML</li>
+						</ul>						
+						<ul class="col-sm-1">
+							<li>CSS</li>
+						</ul>
+						</li>
+					</ul>
+				</div>
 			</div>
 
 			<div id="experiencia" class="apartado row">
@@ -199,9 +149,9 @@
 					<div class="separador"></div>
 				</div>
 
-				<div class="articulo row  col-md-4">
-				<img src="style/images/vips.png" class="col-md-7">
-					<div class="col-md-5" id="texto">
+				<div class="articulo row  col-sm-4">
+				<img src="style/images/vips.png" class="col-sm-7">
+					<div class="col-sm-5" id="texto">
 						<h4>VIPS</h4>
 						<b>Camarero</b>
 						<br>
@@ -214,7 +164,6 @@
 			<div id="otros" class="apartado row">
 				<div class="titulo_apartado">
 					<h2>Otros</h2>
-					<br><br><br><br><br><br>
 				</div>
 				<div class="separador"></div>
 			</div>
