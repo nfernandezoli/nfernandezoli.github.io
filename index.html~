@@ -53,8 +53,8 @@
 				</div>
 <h4>Universidad:</h4>
 
-				<div class="articulo row  col-sm-6">
-				<img src="style/images/uah.png" class="col-sm-6">
+				<div class="articulo row  col-sm-4">
+				<img src="style/images/uah.png" class="col-sm-4">
 					<div class="col-sm-6" id="texto">
 						<h4>URJC</h4>
 						<b>Doble Grado en Derecho con Periodismo</b>
